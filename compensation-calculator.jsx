@@ -607,7 +607,7 @@ function ConsentScreen({ onAccept }) {
           background: "linear-gradient(135deg, #0038B8 0%, #0054C8 100%)",
           padding: "28px 20px 20px", color: "#fff", textAlign: "center",
         }}>
-          <div style={{ fontSize: 36, marginBottom: 8 }}>🇮🇱</div>
+          <img src={new URL("../public/icons/logo-shaagat.svg", import.meta.url).href} alt="שאגת הארי" style={{ width: 72, height: 72, marginBottom: 8, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.3)" }} />
           <h1 style={{ margin: 0, fontSize: 22, fontWeight: 800 }}>מחשבון פיצויים — שאגת הארי 2026</h1>
           <p style={{ margin: "10px 0 0", fontSize: 14, opacity: 0.85 }}>שירות חינמי לציבור הישראלי</p>
         </div>
@@ -1266,7 +1266,8 @@ export default function CompensationCalculator() {
           color: "#fff",
           textAlign: "center",
         }}>
-          <div style={{ fontSize: 13, opacity: 0.7, letterSpacing: 2, marginBottom: 6 }}>🇮🇱 שאגת הארי 2026</div>
+          <img src={new URL("../public/icons/logo-shaagat.svg", import.meta.url).href} alt="שאגת הארי" style={{ width: 56, height: 56, marginBottom: 8, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.3)" }} />
+          <div style={{ fontSize: 13, opacity: 0.7, letterSpacing: 2, marginBottom: 6 }}>שאגת הארי 2026</div>
           <h1 className="calc-header" style={{ margin: 0, fontSize: 22, fontWeight: 800 }}>מחשבון פיצויים</h1>
           <p style={{ margin: "8px 0 0", fontSize: 13, opacity: 0.8 }}>
             לפי תזכיר חוק הסיוע הכלכלי — מרץ 2026 | שירות חינמי לציבור
@@ -1401,7 +1402,7 @@ export default function CompensationCalculator() {
         textAlign: "center", marginTop: 16, fontSize: 12, color: "#8aa4be",
         lineHeight: 1.8,
       }}>
-        <div>שירות חינמי לציבור הישראלי 🇮🇱</div>
+        <div>שירות חינמי לציבור הישראלי</div>
         <div style={{ fontSize: 11, marginTop: 4 }}>
           השימוש במחשבון מותנה באישור תנאי השימוש והסרת האחריות
         </div>
