@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="77" fill="#0038B8"/>
+  <text x="50%" y="38%" text-anchor="middle" dominant-baseline="middle" font-family="Arial,sans-serif" font-weight="800" font-size="179" fill="white">₪</text>
+  <text x="50%" y="62%" text-anchor="middle" dominant-baseline="middle" font-family="Arial,sans-serif" font-weight="600" font-size="46" fill="rgba(255,255,255,0.85)">פיצויים</text>
+  <text x="50%" y="78%" text-anchor="middle" dominant-baseline="middle" font-family="Arial,sans-serif" font-weight="600" font-size="36" fill="rgba(255,255,255,0.6)">2026</text>
+</svg>
