@@ -364,6 +364,7 @@ function PrintButton({ result }) {
       <div class="row"><span>מסלול חישוב</span><span>${result.track}</span></div>
       <div class="total">פיצוי משוער: ₪ ${formatCurrency(result.total)}</div>
       <p class="disclaimer">הבהרה: מחשבון זה מבוסס על תזכיר חוק (טיוטה) ממרץ 2026. נוסח החוק הסופי עשוי להשתנות. הפיצוי הסופי ייקבע אך ורק על ידי רשות המיסים לפי נתוני האמת של העסק. השימוש באפליקציה הינו כלי עזר בלבד ואינו מהווה ייעוץ משפטי או חשבונאי.</p>
+      <p class="disclaimer" style="margin-top:8px;">פותח ונוצר לשירות הציבור על ידי LegalDan | כל הזכויות שמורות © ${new Date().getFullYear()}</p>
       </body></html>`);
     w.document.close();
     w.print();
@@ -1400,8 +1401,11 @@ export default function CompensationCalculator() {
         textAlign: "center", marginTop: 16, fontSize: 12, color: "#8aa4be",
         lineHeight: 1.8,
       }}>
-        <div>שירות חינמי לציבור הישראלי</div>
+        <div>פותח ונוצר לשירות הציבור על ידי <strong style={{ color: "#0038B8" }}>LegalDan</strong></div>
         <div style={{ fontSize: 11, marginTop: 4 }}>
+          כל הזכויות שמורות © {new Date().getFullYear()} LegalDan
+        </div>
+        <div style={{ fontSize: 10, marginTop: 2 }}>
           השימוש במחשבון מותנה באישור תנאי השימוש והסרת האחריות
         </div>
       </div>
