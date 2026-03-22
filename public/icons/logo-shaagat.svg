@@ -1,66 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" dir="rtl">
-  <!-- Background circle -->
-  <circle cx="200" cy="200" r="195" fill="#0038B8" stroke="#fff" stroke-width="4"/>
-  <circle cx="200" cy="200" r="175" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .blue { fill: #0038B8; }
+      .gold { fill: #FFD700; }
+      .gold-dark { fill: #8B6914; }
+      .gold-border { stroke: #DAA520; fill: none; stroke-width: 1.5; }
+    </style>
+  </defs>
 
-  <!-- Roaring Lion silhouette - stylized -->
-  <g transform="translate(200,170)" fill="#fff">
-    <!-- Lion head -->
-    <ellipse cx="0" cy="-20" rx="55" ry="50" fill="#fff" opacity="0.95"/>
-    <!-- Mane - flowing lines -->
-    <path d="M-55,-20 Q-75,-60 -50,-80 Q-30,-90 -10,-75" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-    <path d="M-50,-50 Q-70,-80 -40,-95 Q-15,-105 10,-85" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-    <path d="M-40,-60 Q-55,-90 -25,-100 Q5,-108 25,-85" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-    <path d="M55,-20 Q75,-60 50,-80 Q30,-90 10,-75" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-    <path d="M50,-50 Q70,-80 40,-95 Q15,-105 -10,-85" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-    <path d="M40,-60 Q55,-90 25,-100 Q-5,-108 -25,-85" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-    <!-- Eyes -->
-    <circle cx="-18" cy="-30" r="6" fill="#0038B8"/>
-    <circle cx="18" cy="-30" r="6" fill="#0038B8"/>
-    <circle cx="-16" cy="-31" r="2" fill="#fff"/>
-    <circle cx="20" cy="-31" r="2" fill="#fff"/>
-    <!-- Nose -->
-    <ellipse cx="0" cy="-15" rx="8" ry="5" fill="#0038B8" opacity="0.6"/>
+  <!-- White background circle for app icon -->
+  <circle cx="200" cy="200" r="198" fill="#fff"/>
+  <circle cx="200" cy="200" r="195" fill="none" stroke="#0038B8" stroke-width="3"/>
+
+  <!-- Top flowing ribbon -->
+  <path d="M40,110 Q120,70 200,95 Q280,120 360,80" fill="none" stroke="#0038B8" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Bottom flowing ribbon -->
+  <path d="M40,310 Q120,350 200,320 Q280,290 360,330" fill="none" stroke="#0038B8" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Lion body - standing, facing left, roaring -->
+  <g transform="translate(135,155)" class="blue">
+    <!-- Back body -->
+    <ellipse cx="30" cy="55" rx="40" ry="28"/>
+    <!-- Chest -->
+    <ellipse cx="-10" cy="40" rx="25" ry="32"/>
+    <!-- Head -->
+    <circle cx="-20" cy="5" r="25"/>
+    <!-- Mane - flowing hair -->
+    <path d="M-10,-15 Q-25,-35 -15,-45 Q-5,-50 5,-40 Q10,-30 5,-15" fill="#0038B8"/>
+    <path d="M-35,0 Q-55,-10 -50,-25 Q-45,-35 -35,-30 Q-25,-20 -30,0" fill="#0038B8"/>
+    <path d="M-40,10 Q-60,5 -55,-10 Q-50,-20 -40,-15" fill="#0038B8"/>
+    <path d="M0,-18 Q5,-40 15,-42 Q25,-40 20,-25 Q15,-15 10,-10" fill="#0038B8"/>
     <!-- Open mouth - roaring -->
-    <path d="M-25,0 Q-15,25 0,30 Q15,25 25,0" fill="#c62828" opacity="0.8"/>
-    <path d="M-20,2 L-15,12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-    <path d="M20,2 L15,12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-    <!-- Body suggestion -->
-    <path d="M-40,20 Q-60,60 -45,90 L45,90 Q60,60 40,20" fill="#fff" opacity="0.3"/>
+    <path d="M-42,0 Q-55,5 -52,15 Q-48,20 -38,15 Z" fill="#0038B8"/>
+    <path d="M-44,2 Q-52,0 -50,8" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <!-- Eye -->
+    <circle cx="-28" cy="-2" r="3" fill="#fff"/>
+    <circle cx="-29" cy="-2" r="1.5" fill="#0038B8"/>
+    <!-- Ear -->
+    <path d="M-8,-22 Q-5,-32 -12,-30 Q-16,-28 -12,-20" fill="#0038B8"/>
+    <!-- Front legs -->
+    <rect x="-25" y="65" width="10" height="35" rx="4" fill="#0038B8"/>
+    <rect x="-10" y="60" width="10" height="40" rx="4" fill="#0038B8"/>
+    <!-- Back legs -->
+    <rect x="40" y="65" width="10" height="35" rx="4" fill="#0038B8"/>
+    <rect x="55" y="60" width="10" height="35" rx="4" fill="#0038B8"/>
+    <!-- Paws -->
+    <ellipse cx="-20" cy="102" rx="7" ry="4" fill="#0038B8"/>
+    <ellipse cx="-5" cy="102" rx="7" ry="4" fill="#0038B8"/>
+    <ellipse cx="45" cy="102" rx="7" ry="4" fill="#0038B8"/>
+    <ellipse cx="60" cy="97" rx="7" ry="4" fill="#0038B8"/>
+    <!-- Tail - curved up -->
+    <path d="M68,45 Q85,30 90,10 Q92,0 88,-5 Q82,-8 80,0 Q78,10 70,25" fill="none" stroke="#0038B8" stroke-width="6" stroke-linecap="round"/>
   </g>
 
-  <!-- Coins - ₪ symbols around the lion -->
-  <g font-family="Arial,sans-serif" font-weight="700" fill="#FFD700">
-    <!-- Coin 1 - top left -->
-    <circle cx="75" cy="100" r="22" fill="#FFD700" opacity="0.9"/>
-    <circle cx="75" cy="100" r="18" fill="none" stroke="#DAA520" stroke-width="2"/>
-    <text x="75" y="106" text-anchor="middle" font-size="18" fill="#8B6914">₪</text>
-
-    <!-- Coin 2 - top right -->
-    <circle cx="325" cy="100" r="22" fill="#FFD700" opacity="0.9"/>
-    <circle cx="325" cy="100" r="18" fill="none" stroke="#DAA520" stroke-width="2"/>
-    <text x="325" y="106" text-anchor="middle" font-size="18" fill="#8B6914">₪</text>
-
-    <!-- Coin 3 - bottom left -->
-    <circle cx="85" cy="310" r="20" fill="#FFD700" opacity="0.85"/>
-    <circle cx="85" cy="310" r="16" fill="none" stroke="#DAA520" stroke-width="2"/>
-    <text x="85" y="316" text-anchor="middle" font-size="16" fill="#8B6914">₪</text>
-
-    <!-- Coin 4 - bottom right -->
-    <circle cx="315" cy="310" r="20" fill="#FFD700" opacity="0.85"/>
-    <circle cx="315" cy="310" r="16" fill="none" stroke="#DAA520" stroke-width="2"/>
-    <text x="315" y="316" text-anchor="middle" font-size="16" fill="#8B6914">₪</text>
+  <!-- Star of David - right side -->
+  <g transform="translate(300,185)">
+    <polygon points="0,-32 28,16 -28,16" fill="none" stroke="#0038B8" stroke-width="5" stroke-linejoin="round"/>
+    <polygon points="0,32 28,-16 -28,-16" fill="none" stroke="#0038B8" stroke-width="5" stroke-linejoin="round"/>
   </g>
+
+  <!-- Coins with ₪ - added around the design -->
+  <!-- Coin top-left -->
+  <circle cx="65" cy="75" r="18" class="gold" opacity="0.9"/>
+  <circle cx="65" cy="75" r="14" class="gold-border"/>
+  <text x="65" y="81" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="15" class="gold-dark">₪</text>
+
+  <!-- Coin top-right -->
+  <circle cx="335" cy="75" r="18" class="gold" opacity="0.9"/>
+  <circle cx="335" cy="75" r="14" class="gold-border"/>
+  <text x="335" y="81" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="15" class="gold-dark">₪</text>
+
+  <!-- Coin bottom-left -->
+  <circle cx="55" cy="335" r="16" class="gold" opacity="0.85"/>
+  <circle cx="55" cy="335" r="12" class="gold-border"/>
+  <text x="55" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="13" class="gold-dark">₪</text>
+
+  <!-- Coin bottom-right -->
+  <circle cx="345" cy="335" r="16" class="gold" opacity="0.85"/>
+  <circle cx="345" cy="335" r="12" class="gold-border"/>
+  <text x="345" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="13" class="gold-dark">₪</text>
 
   <!-- Text: שאגת הארי -->
-  <text x="200" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="28" fill="#fff" letter-spacing="2">שאגת הארי</text>
-
-  <!-- Text: 2026 -->
-  <text x="200" y="375" text-anchor="middle" font-family="Arial,sans-serif" font-weight="600" font-size="18" fill="rgba(255,255,255,0.7)">2026</text>
-
-  <!-- Small Star of David at top -->
-  <g transform="translate(200,45)" fill="none" stroke="#fff" stroke-width="2" opacity="0.8">
-    <polygon points="0,-14 12,7 -12,7"/>
-    <polygon points="0,14 12,-7 -12,-7"/>
-  </g>
+  <text x="200" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="30" fill="#0038B8">שאגת הארי</text>
 </svg>
