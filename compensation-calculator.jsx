@@ -1,11 +1,9 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import logoShaagat from "/icons/logo-shaagat.svg";
 
 // ═══════════════════════════════════════════════
 // מחשבון פיצויים — שאגת הארי 2026
 // שירות חינמי לציבור
-// ═══════════════════════════════════════════════
-// IMPORTANT: הוסף ל-index.html:
-// <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 // ═══════════════════════════════════════════════
 
 const AVG_WAGE_2026 = 12800;
@@ -332,7 +330,7 @@ function BreakdownRow({ label, value, highlight, sub }) {
     >
       <span>{label}</span>
       <span style={{
-        fontFamily: "'Courier New', monospace",
+        fontFamily: "inherit", fontVariantNumeric: "tabular-nums",
         color: highlight ? "#0038B8" : "#3a5a7c",
         fontWeight: highlight ? 700 : 500,
         fontSize: highlight ? 16 : 14,
@@ -352,7 +350,7 @@ function PrintButton({ result }) {
     w.document.write(`<!DOCTYPE html><html dir="rtl" lang="he"><head><meta charset="UTF-8">
       <title>סימולציית פיצוי — שאגת הארי 2026</title>
       <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; padding: 40px; max-width: 600px; margin: auto; }
+        body { font-family: 'Noto Sans Hebrew', 'Segoe UI', Arial, sans-serif; padding: 40px; max-width: 600px; margin: auto; }
         h1 { color: #0038B8; font-size: 22px; border-bottom: 3px solid #0038B8; padding-bottom: 12px; }
         .row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #d6e8f5; }
         .total { font-size: 20px; font-weight: bold; color: #0038B8; margin-top: 16px; padding: 16px; background: #e6eeff; border-radius: 8px; text-align: center; }
@@ -590,7 +588,7 @@ function ConsentScreen({ onAccept }) {
       minHeight: "100dvh",
       background: "linear-gradient(160deg, #ffffff 0%, #e8f2ff 50%, #d0e4f7 100%)",
       padding: "16px",
-      fontFamily: "'Segoe UI', 'Noto Sans Hebrew', Arial, sans-serif",
+      fontFamily: "'Noto Sans Hebrew', 'Segoe UI', Arial, sans-serif",
       direction: "rtl",
       display: "flex", alignItems: "flex-start", justifyContent: "center",
       overflowY: "auto", WebkitOverflowScrolling: "touch",
@@ -607,7 +605,7 @@ function ConsentScreen({ onAccept }) {
           background: "linear-gradient(135deg, #0038B8 0%, #0054C8 100%)",
           padding: "28px 20px 20px", color: "#fff", textAlign: "center",
         }}>
-          <img src={new URL("../public/icons/logo-shaagat.svg", import.meta.url).href} alt="שאגת הארי" style={{ width: 72, height: 72, marginBottom: 8, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.3)" }} />
+          <img src={logoShaagat} alt="שאגת הארי" style={{ width: 72, height: 72, marginBottom: 8, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.3)" }} />
           <h1 style={{ margin: 0, fontSize: 22, fontWeight: 800 }}>מחשבון פיצויים — שאגת הארי 2026</h1>
           <p style={{ margin: "10px 0 0", fontSize: 14, opacity: 0.85 }}>שירות חינמי לציבור הישראלי</p>
         </div>
@@ -1014,7 +1012,7 @@ export default function CompensationCalculator() {
               color: "#fff", textAlign: "center",
             }}>
               <div style={{ fontSize: 13, opacity: 0.85, marginBottom: 4 }}>שיעור ירידה</div>
-              <div style={{ fontSize: 32, fontWeight: 800, fontFamily: "'Courier New', monospace" }}>
+              <div style={{ fontSize: 32, fontWeight: 800, fontFamily: "inherit", fontVariantNumeric: "tabular-nums" }}>
                 {(drop * 100).toFixed(1)}%
               </div>
               {drop >= minDrop && (
@@ -1094,7 +1092,7 @@ export default function CompensationCalculator() {
             color: "#fff", marginBottom: 24,
           }}>
             <div style={{ fontSize: 14, opacity: 0.8, marginBottom: 8 }}>פיצוי משוער</div>
-            <div style={{ fontSize: 48, fontWeight: 800, fontFamily: "'Courier New', monospace", letterSpacing: 1 }}>
+            <div style={{ fontSize: 48, fontWeight: 800, fontFamily: "inherit", fontVariantNumeric: "tabular-nums", letterSpacing: 1 }}>
               ₪ <AnimatedNumber value={result.total} />
             </div>
             <div style={{
@@ -1202,7 +1200,7 @@ export default function CompensationCalculator() {
       background: "linear-gradient(160deg, #ffffff 0%, #e8f2ff 50%, #d0e4f7 100%)",
       padding: "16px",
       paddingTop: "env(safe-area-inset-top, 16px)",
-      fontFamily: "'Segoe UI', 'Noto Sans Hebrew', Arial, sans-serif",
+      fontFamily: "'Noto Sans Hebrew', 'Segoe UI', Arial, sans-serif",
       direction: "rtl",
     }}>
       <style>{`
@@ -1266,7 +1264,7 @@ export default function CompensationCalculator() {
           color: "#fff",
           textAlign: "center",
         }}>
-          <img src={new URL("../public/icons/logo-shaagat.svg", import.meta.url).href} alt="שאגת הארי" style={{ width: 56, height: 56, marginBottom: 8, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.3)" }} />
+          <img src={logoShaagat} alt="שאגת הארי" style={{ width: 56, height: 56, marginBottom: 8, borderRadius: "50%", border: "2px solid rgba(255,255,255,0.3)" }} />
           <div style={{ fontSize: 13, opacity: 0.7, letterSpacing: 2, marginBottom: 6 }}>שאגת הארי 2026</div>
           <h1 className="calc-header" style={{ margin: 0, fontSize: 22, fontWeight: 800 }}>מחשבון פיצויים</h1>
           <p style={{ margin: "8px 0 0", fontSize: 13, opacity: 0.8 }}>
