@@ -924,7 +924,7 @@ export default function CompensationCalculator() {
             </label>
             <Toggle
               label="עוסק המדווח על בסיס מזומן"
-              tooltip="עוסק שמתחייב במע״מ עם קבלת התמורה ומקבל את עיקר התקבולים בחודש שלאחר ביצוע העסקה. תקופת הזכאות תהיה מאי-יוני 2026 במקום מרץ-אפריל. נדרשת ירידה של 40% לפחות."
+              tooltip="סמן אם אתה מדווח למע״מ רק כשמתקבל התשלום (ולא במועד הוצאת החשבונית). אם הכסף שנכנס במרץ-אפריל הוא בעיקר על עבודות מינואר-פברואר — סביר שאתה על בסיס מזומן, ותקופת הזכאות שלך היא מאי-יוני 2026 (כי אז תורגש הפגיעה בפועל). נדרשת ירידה מינימלית של 40%."
               checked={form.cashBasis}
               onChange={(v) => update("cashBasis", v)}
             />
@@ -934,6 +934,13 @@ export default function CompensationCalculator() {
               checked={form.affectedArea}
               onChange={(v) => update("affectedArea", v)}
             />
+            <div style={{
+              padding: "10px 14px", borderRadius: 8, background: "#f8fbff",
+              border: "1px solid #d6e8f5", fontSize: 12, color: "#5a7a9a",
+              lineHeight: 1.7, marginTop: 4,
+            }}>
+              💡 <strong>חשוב:</strong> עסק רגיל מדווח למע״מ לפי מועד העסקה (הוצאת חשבונית) — גם אם התשלום התקבל מאוחר יותר. רק עוסק שמדווח למע״מ <strong>במועד קבלת התשלום בפועל</strong> ייחשב כ"בסיס מזומן", ויושווה לתקופה מאי-יוני.
+            </div>
           </div>
 
           {form.annual && annual >= 12000 && annual <= 400000000 && (
